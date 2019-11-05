@@ -1,0 +1,8 @@
+logs/
+*.pyc
+taskpic/temp/
+!.gitignore
+*.log
+.vscode/
+mysetting.py
+.ipynb_checkpoints/
