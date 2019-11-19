@@ -1,5 +1,12 @@
-"""朴素贝叶斯算法的实现"""
-"""2019/4/12"""
+'''
+@Author: longfengpili
+@Date: 2019-11-04 07:11:56
+@LastEditTime: 2019-11-20 07:35:49
+@github: https://github.com/longfengpili
+'''
+#!/usr/bin/env python3
+#-*- coding:utf-8 -*-
+
 import numpy as np
 import pandas as pd
 
@@ -17,7 +24,10 @@ class NaiveBayes():
         # y的（类型：数量）统计
         self.y_types_count=y[0].value_counts()
         # y的（类型：概率）计算
+        print(self.y_types)
+        print(type(self.y_types))
         self.y_types_proba=(self.y_types_count+self.lambda_)/(y.shape[0]+len(self.y_types)*self.lambda_)
+        print(self.y_types_proba)
 
         # （xi 的编号,xi的取值，y的类型）：概率的计算
         for idx in X.columns:       # 遍历xi
